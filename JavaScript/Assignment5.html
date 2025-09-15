@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding-top: 50px;
+        }
+        .card{
+            padding-top: 30px;
+            height: 300px;
+            width: 300px;
+            border-radius: 10%;
+            background-color: antiquewhite;
+        }
+        .content{
+            border: 2px solid green;
+            height: 70px;
+            width: 50px;
+            text-align: center;
+            margin: auto;
+        }
+        .content h1{
+            margin: 0;
+            line-height: 70px;
+        }
+        .cardbuttons{
+            display: flex; 
+            justify-content: space-around;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+            <div class="card">
+                <div class="nav">
+                    <h1>Counter App</h1>
+                </div>
+
+                <div class="carditems">
+                    <div class="content">
+                        <h1 id="count">1</h1>
+                    </div>
+                    <br><br>
+                    <div class="cardbuttons">
+                        <br>
+                        <button id="inc" onclick="increment()">INC</button>
+                        <button id="dec" onclick="decrement()">DEC</button>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <script>
+        let count = 1;
+        const display = document.getElementById("count");
+
+        function increment() {
+            if (count < 10) {
+                count++;
+                display.innerText = count;
+            } else {
+                alert("Max limit reached!");
+            }
+        }
+
+        function decrement() {
+            if (count > 1) {
+                count--;
+                display.innerText = count;
+            } else {
+                alert("Min limit reached!");
+            }
+        }
+    </script>
+</body>
+</html>

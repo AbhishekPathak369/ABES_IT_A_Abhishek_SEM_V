@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Booking System</title>
+    <style>
+        table{
+            background-color: aliceblue;
+        }
+       
+    </style>
+</head>
+<body>
+    <center>
+        <!-- Navbar -->
+        <table  width="100%">
+            <tr>
+                <td width="10%"><b><img src="./image.png" alt="" height="60px"></b></td>
+              
+                <td align="center"><a href="index.html">Book Seat</a></td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- Main Form -->
+        <marquee behavior="" direction=""><h2>Welcome to Bus Booking System</h2></marquee>
+        <form action="payment.html" method="get">
+            <table border="0" cellpadding="10">
+                <tr>
+                    <td>User Name:</td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td>User Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>User Select City:</td>
+                    <td>
+                        <select name="city">
+                            <option value="">Select City</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Patna">Patna</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select your seat:</td>
+                    <td>
+                        <input type="radio" name="seat" value="AC"> AC
+                        <input type="radio" name="seat" value="Non-AC"> Non-AC
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit">Book Seat</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment5 part2</title>
+
+        <style>
+            img{
+                height: 200px;
+                width: 250px;
+            }
+
+            .card-wrapper{
+                display: flex;
+                padding-top: 30px;
+                justify-content: space-between;
+            }
+            .card1{
+                height: 300px;
+                width: 300px;
+                border: 2px solid blue;
+                border-radius: 5%;
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+            <div class="card-wrapper">
+
+                <div class="card1">
+                    <div class="image-container">
+                        <img src="../html/istockphoto-1681388313-612x612.jpg" id="img1">
+                    </div>
+                    <div class="btn-hide">
+                        <button id="hide" onclick="hide()">HideIMAGE</button>
+                    </div>
+                </div>
+
+                <div class="card1">
+                    <div class="image-container">
+                         <img src="../html/istockphoto-1681388313-612x612.jpg" alt="" id="img2">
+                    </div>
+                    <div class="btn-change">
+                        <button id="change" onclick="change()">ChangeIMAGE</button>
+                    </div>
+                </div>
+              
+            </div>
+        </center>
+
+
+       <script>
+    function hide(){
+        let img = document.getElementById('img1');
+        if(img.style.display === "none"){
+            img.style.display = "block";
+        } else {
+            img.style.display = "none";
+        }
+    }
+
+    function change(){
+        let img = document.getElementById('img2');
+        if(img.src.includes("istockphoto-1681388313-612x612.jpg")){
+            img.src = "./supernova.png";
+        } else {
+            img.src = "../html/istockphoto-1681388313-612x612.jpg";
+        }
+    }
+</script>
+
+</body>
+</html>
