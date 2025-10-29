@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+</head>
+<body>
+    <p><input type="text" name="todo" id="xyz">
+        <button onclick="add()">Add Task</button>
+    </p>
+    <p>
+        <ul id="abc">
+
+
+        </ul>
+
+    </p>
+    <script>
+        const add=()=>{
+            var curr=document.getElementById("xyz").value;
+            var x=document.createElement("li");
+            x.textContent=curr;
+
+            var del=document.createElement("button");
+            del.textContent="DELETE";
+
+            del.onclick=()=>{
+                x.remove();
+                del.remove();
+            }
+
+            document.getElementById("abc").appendChild(x);
+            document.getElementById("abc").append(del);
+           
+        }
+    </script>
+</body>
+</html>

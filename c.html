@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout with Images</title>
+    <style>
+        .container {
+            width: 300px;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .text-italic {
+            font-style: italic;
+                  text-align: center;
+            font-size: 24px;
+        }
+
+
+
+
+        .row-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* .text-underline-blue {
+            text-decoration: underline;
+            color: blue;
+        } */
+
+        .image-vertical-scroll {
+            text-align: center;
+            overflow-y: scroll;
+            height: 100px;
+        }
+
+        .image-horizontal-scroll {
+            text-align: center;
+            overflow-x: scroll;
+            white-space: nowrap;
+        }
+
+        .image-vertical-scroll img,
+        .image-horizontal-scroll img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="text-italic">
+        web Technology
+    </div>
+    <div class="row-container">
+        <!-- <div class="text-underline-blue">
+            Text underline
+            Blue
+        </div> -->
+        <div class="image-vertical-scroll">
+            <img src="https://picsum.photos/id/237/150/150" alt="Dog image">
+            <img src="https://picsum.photos/id/160/150/150" alt="Camera image">
+            <img src="https://picsum.photos/id/249/150/150" alt="Snowy mountain image">
+        </div>
+    </div>
+    <div class="image-horizontal-scroll">
+        <img src="https://picsum.photos/id/257/150/150" alt="Desert image" style="display: inline-block;">
+        <img src="https://picsum.photos/id/270/150/150" alt="Forest image" style="display: inline-block;">
+        <img src="https://picsum.photos/id/272/150/150" alt="Waterfall image" style="display: inline-block;">
+    </div>
+</div>
+<center><h4>Designed by Abhiii Pathak</h4></center>
+</body>
+</html>
