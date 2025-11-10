@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume </title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .resume-section-card{
+            width: 40%;
+            height: 80%;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            padding: 20px;
+        }
+
+        .input-data-section-card{
+            width: 40%;
+            height: 80%;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            padding: 20px;
+        }
+
+        .header{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .image-section img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .intro .your-name{
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .details h2, .details h3{
+            margin-bottom: 10px;
+        }
+
+        .known ul{
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .input-data-section-card center{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-data-section-card input{
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .input-data-section-card button{
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        .input-data-section-card button:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="resume-section-card">
+            <div class="header">
+                <div class="image-section">
+                    <img src="./unnamed.png" alt="profile-pic">
+                </div>
+
+                <div class="intro">
+                    <h1 class="your-name"></h1>
+                    <h2>B.Tech(IT)</h2>
+                </div>
+
+            </div>
+
+            <div class="details">
+                <h2 class="language known">language Known
+                    <ul>
+                        <li class="lanuage-list"></li>
+                        <li class="lanuage-list"></li>
+                        <li class="lanuage-list"></li>
+                    </ul>
+                </h2>
+
+                <h3>Address </h3>
+            </div>
+
+        </div>
+        <!-- inputsection card -->
+
+        <div class="input-data-section-card">
+
+            <center>
+                <h1 class="heading">Input Data to Resume</h1>
+               Name :
+                <input type="text" id ="name" placeholder="Enter Your Name">
+                Language Known :
+                <input type="text" id ="lang1" placeholder="Enter Language Known">  
+            
+                <input type="text" id ="lang2" placeholder="Enter Language Known">
+                <input type="text" id ="lang3" placeholder="Enter Language Known">
+                Address :
+                <input type="textarea" id ="address" placeholder="Enter Your Address">
+                <button onclick="print()">click to add</button>
+
+            </center>
+        </div>
+    </div>
+
+    <script>
+        function print(){
+            var name = document.getElementById("name").value;
+            var lang1 = document.getElementById("lang1").value;
+            var lang2 = document.getElementById("lang2").value;
+            var lang3 = document.getElementById("lang3").value;
+            var address = document.getElementById("address").value;
+
+            document.querySelector(".your-name").innerHTML = name;
+            document.querySelectorAll(".lanuage-list")[0].innerHTML = lang1;
+            document.querySelectorAll(".lanuage-list")[1].innerHTML = lang2;
+            document.querySelectorAll(".lanuage-list")[2].innerHTML = lang3;
+            document.querySelector(".details h3").innerHTML = "Address : " + address;
+        }
+    </script>
+</body>
+</html>
